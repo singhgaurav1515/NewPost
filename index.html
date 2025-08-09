@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Trump: Achievements & Record</title>
+  <meta name="description" content="A concise showcase of policy highlights and achievements from President Donald J. Trump." />
+  <style>
+    /* Modern, minimal responsive style */
+    :root{
+      --bg:#0f1724;
+      --card:#0b1220;
+      --accent:#f59e0b;
+      --muted:#94a3b8;
+      --glass: rgba(255,255,255,0.03);
+      --radius:14px;
+      --maxw:1100px;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      background:linear-gradient(180deg,#071028 0%, #061426 100%);
+      color:#e6eef8;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.45;
+    }
+    .container{max-width:var(--maxw);margin:36px auto;padding:24px;}
+    header{
+      display:flex;align-items:center;gap:18px;margin-bottom:22px;
+    }
+    .logo{
+      width:72px;height:72px;border-radius:12px;background:var(--glass);display:flex;align-items:center;justify-content:center;font-weight:700;color:var(--accent);font-size:22px;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.6), inset 0 -1px 0 rgba(255,255,255,0.02);
+    }
+    h1{margin:0;font-size:28px;letter-spacing:-0.02em}
+    p.lead{color:var(--muted);margin:6px 0 0;}
+    .hero{
+      margin-top:18px;padding:28px;border-radius:var(--radius);background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      display:grid;grid-template-columns:1fr 360px;gap:18px;align-items:center;
+      box-shadow: 0 10px 30px rgba(2,6,23,0.6);
+    }
+    @media (max-width:880px){
+      .hero{grid-template-columns:1fr; padding:18px;}
+      .hero-right{order:-1}
+    }
+    .hero h2{margin:0 0 6px;font-size:22px}
+    .cta{
+      margin-top:12px;
+      display:flex;gap:12px;
+    }
+    .btn{
+      padding:10px 14px;border-radius:10px;background:var(--accent);color:#061426;text-decoration:none;font-weight:600;
+      box-shadow: 0 6px 18px rgba(245,158,11,0.12);
+    }
+    .muted{color:var(--muted);font-size:14px}
+    .card{background:var(--card);padding:18px;border-radius:12px;}
+    .hero-right img{width:100%;height:100%;object-fit:cover;border-radius:10px;border:1px solid rgba(255,255,255,0.03);}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:18px}
+    @media (max-width:1100px){.grid{grid-template-columns:repeat(2,1fr)}}
+    @media (max-width:660px){.grid{grid-template-columns:1fr}}
+    .tile{padding:18px;border-radius:12px;background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.005));}
+    .tile h3{margin:0 0 8px;font-size:16px}
+    .tile p{margin:0;color:var(--muted);font-size:14px}
+    footer{margin-top:26px;color:var(--muted);font-size:13px;text-align:center;}
+    .sources{margin-top:10px;text-align:left;font-size:13px;color:var(--muted)}
+    .gallery{display:flex;gap:12px;flex-wrap:wrap;margin-top:12px}
+    .gallery img{width:150px;height:150px;object-fit:cover;border-radius:10px;border:1px solid rgba(255,255,255,0.03)}
+    /* small accessible focus styles */
+    a:focus{outline:3px dashed rgba(245,158,11,0.18);outline-offset:4px}
+  </style>
+</head>
+<body>
+  <div class="container" role="main">
+    <header>
+      <div class="logo" aria-hidden="true">TRUMP</div>
+      <div>
+        <h1>Donald J. Trump — Selected Highlights</h1>
+        <p class="lead">A clean summary of key accomplishments and highlights from President Trump's administration.</p>
+      </div>
+    </header>
+
+    <section class="hero" aria-labelledby="hero-title">
+      <div>
+        <h2 id="hero-title">Leadership. Policy. Results.</h2>
+        <p class="muted">This page highlights major legislative and policy achievements often cited by supporters — tax reform, trade agreements, criminal justice reform, and strong pre-pandemic economic indicators.</p>
+
+        <div class="grid" style="margin-top:18px">
+          <div class="tile card" id="tax-cut">
+            <h3>Tax Reform (2017)</h3>
+            <p>Signed the Tax Cuts and Jobs Act, a broad overhaul of the tax code that reduced corporate rates and changed individual brackets and deductions — measures supporters credit for stimulating investment and growth. <span class="muted" id="c1"></span></p>
+          </div>
+
+          <div class="tile card" id="jobs">
+            <h3>Jobs & Economy</h3>
+            <p>Before the COVID pandemic, unemployment fell to lows not seen in decades and median household income rose — items frequently highlighted as indicators of economic strength during the administration. <span class="muted" id="c2"></span></p>
+          </div>
+
+          <div class="tile card" id="trade">
+            <h3>USMCA Trade Deal</h3>
+            <p>Negotiated and implemented the USMCA to modernize North American trade rules and replace NAFTA, aiming to support manufacturing and high-paying jobs. <span class="muted" id="c3"></span></p>
+          </div>
+
+          <div class="tile card" id="justice">
+            <h3>First Step Act (2018)</h3>
+            <p>Signed bipartisan criminal justice reform to reduce recidivism and modify some sentencing provisions — a notable bipartisan achievement. <span class="muted" id="c4"></span></p>
+          </div>
+
+          <div class="tile card" id="markets">
+            <h3>Markets & Investment</h3>
+            <p>U.S. equity markets experienced substantial gains during the administration's first term, a point commonly used to demonstrate investor confidence. <span class="muted" id="c5"></span></p>
+          </div>
+
+          <div class="tile card" id="more">
+            <h3>More</h3>
+            <p>Regulatory rollbacks, energy policy focused on domestic production, and judicial appointments are additional themes supporters cite as long-term impacts.</p>
+          </div>
+        </div>
+
+        <div class="cta" style="margin-top:18px">
+          <a class="btn" href="#accomplishments">Explore the facts</a>
+          <a class="btn" style="background:transparent;color:var(--accent);border:1px solid rgba(245,158,11,0.12)" href="#sources">Sources</a>
+        </div>
+      </div>
+
+      <aside class="hero-right card" aria-label="Photo of Donald Trump">
+        <!-- Placeholder SVG (works locally) — replace src with a hosted portrait if you want -->
+        <img alt="Portrait" src="data:image/svg+xml;utf8,
+          <svg xmlns='http://www.w3.org/2000/svg' width='1200' height='800'>
+            <rect width='100%' height='100%' fill='%2308141b'/>
+            <text x='50%' y='50%' fill='%23f59e0b' font-size='40' font-family='Arial' text-anchor='middle'>Donald J. Trump</text>
+            <text x='50%' y='58%' fill='%23ffffff' font-size='20' font-family='Arial' text-anchor='middle'>Official Portrait (placeholder)</text>
+          </svg>" />
+      </aside>
+    </section>
+
+    <section id="accomplishments" style="margin-top:20px">
+      <div class="card">
+        <h2 style="margin-top:0">Accomplishments — details & sources</h2>
+
+        <article style="margin-top:12px">
+          <h3 style="margin-bottom:6px">Tax Cuts and Jobs Act (2017)</h3>
+          <p class="muted">The 2017 Tax Cuts and Jobs Act changed corporate tax rates and individual brackets and is widely cited by supporters as a pro-growth reform. Read an official summary for businesses and CRS analysis for details.</p>
+          <p class="sources">Sources: IRS summary; Congressional Research Service. :contentReference[oaicite:5]{index=5}</p>
+        </article>
+
+        <article style="margin-top:12px">
+          <h3 style="margin-bottom:6px">Jobs & Unemployment</h3>
+          <p class="muted">U.S. unemployment reached multi-decade lows before the COVID-19 pandemic; BLS data provide month-by-month figures showing those trends.</p>
+          <p class="sources">Source: Bureau of Labor Statistics unemployment series. :contentReference[oaicite:6]{index=6}</p>
+        </article>
+
+        <article style="margin-top:12px">
+          <h3 style="margin-bottom:6px">USMCA (North American Trade)</h3>
+          <p class="muted">The USMCA modernized NAFTA rules and officially entered into force in July 2020, with aims to support North American workers and trade. </p>
+          <p class="sources">Source: Office of the U.S. Trade Representative (USTR) and Congressional Research Service summaries. :contentReference[oaicite:7]{index=7}</p>
+        </article>
+
+        <article style="margin-top:12px">
+          <h3 style="margin-bottom:6px">First Step Act (2018)</h3>
+          <p class="muted">A bipartisan criminal justice reform law focused on recidivism reduction, prison programming, and some sentencing adjustments was signed in 2018.</p>
+          <p class="sources">Sources: Bureau of Prisons overview; CRS analysis. :contentReference[oaicite:8]{index=8}</p>
+        </article>
+
+        <article style="margin-top:12px">
+          <h3 style="margin-bottom:6px">Markets & Investment</h3>
+          <p class="muted">Major U.S. equity indexes recorded significant gains across the administration's first term — a commonly cited metric by supporters to indicate market confidence.</p>
+          <p class="sources">Sources: S&P 500 performance summaries and market commentary. :contentReference[oaicite:9]{index=9}</p>
+        </article>
+
+      </div>
+    </section>
+
+    <section id="gallery" style="margin-top:18px">
+      <div class="card">
+        <h2 style="margin-top:0">Gallery</h2>
+        <div class="gallery" aria-label="portraits">
+          <!-- Replace these with licensed photos you host. Below are placeholders. -->
+          <img alt="Portrait 1" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><rect width='100%' height='100%' fill='%230f1724'/><text x='50%' y='50%' fill='%23f59e0b' font-size='18' text-anchor='middle'>Portrait 1</text></svg>">
+          <img alt="Portrait 2" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><rect width='100%' height='100%' fill='%230f1724'/><text x='50%' y='50%' fill='%23f59e0b' font-size='18' text-anchor='middle'>Portrait 2</text></svg>">
+          <img alt="Portrait 3" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><rect width='100%' height='100%' fill='%230f1724'/><text x='50%' y='50%' fill='%23f59e0b' font-size='18' text-anchor='middle'>Portrait 3</text></svg>">
+        </div>
+        <p class="muted" style="margin-top:10px">Want me to swap these placeholders for official portraits (public domain / free-use)? I can add direct image URLs and captions.</p>
+      </div>
+    </section>
+
+    <footer id="sources" style="margin-top:18px">
+      <div style="max-width:900px;margin:0 auto;">
+        <p>Sources & further reading (key references):</p>
+        <ul class="muted" style="text-align:left;line-height:1.6">
+          <li>Tax Cuts and Jobs Act — IRS summary & CRS analysis. :contentReference[oaicite:10]{index=10}</li>
+          <li>First Step Act — BOP overview & CRS. :contentReference[oaicite:11]{index=11}</li>
+          <li>USMCA — USTR summary; CRS background. :contentReference[oaicite:12]{index=12}</li>
+          <li>Unemployment data — Bureau of Labor Statistics. :contentReference[oaicite:13]{index=13}</li>
+          <li>Market performance — S&P 500 by presidential term / market commentary. :contentReference[oaicite:14]{index=14}</li>
+        </ul>
+
+        <p style="margin-top:10px" class="muted">This page is intended as a concise, sourced overview of commonly cited achievements. If you'd like a version that is longer, includes citations visible on each tile, a downloadable PDF, or social media banners, tell me which and I’ll produce them.</p>
+
+        <p style="margin-top:14px" class="muted">© 2025 Supporters' Page • Built with care</p>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    // small script to populate citation tokens inside tiles (already cited in the footer)
+    document.getElementById('c1').textContent = 'See sources below.';
+    document.getElementById('c2').textContent = 'See sources below.';
+    document.getElementById('c3').textContent = 'See sources below.';
+    document.getElementById('c4').textContent = 'See sources below.';
+    document.getElementById('c5').textContent = 'See sources below.';
+  </script>
+</body>
+</html>
